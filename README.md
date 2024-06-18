@@ -87,6 +87,36 @@ Ich lese die Daten jede Minute mittels eines crontabs aus.
 
 Vor dem starten muss die IP-Adresse im Skript auf die von euerem AC-ELWA 2 geändert werden.
 
+## Sonstiges
+
+Will man nur einige Daten in die Influx importieren kann das Skript ac-elwa2-fetchdata.py verwendet und angepasst werden. Diese importiert nur die folgenden Werte:
+
+```python3
+    power_elwa2 = data['power_elwa2']    # Benötigte Watt Gesamt
+    power_solar = data['power_solar']    # Benötigte Watt Solar
+    power_grid = data['power_grid']      # Benötigte Watt Grid / Netzbezug
+    temp1 = data['temp1'] / 10.0         # Convert temp1 from 552 to 55.2 / Aktuelle gemessen Temperatur Sensor 1
+    uptime = data['uptime']              # Anzahl Anschaltungen
+
+
+    json_body = [
+        {
+            "measurement": "elwa_data",
+            "tags": {
+                "device": "AC ELWA 2"
+            },
+            "time": unixtime,
+            "fields": {
+                "power_elwa2": power_elwa2,
+                "power_solar": power_solar,
+                "power_grid": power_grid,
+                "temp1": temp1,
+                "uptime": uptime
+            }
+        }
+    ]
+```
+
 
 
 
