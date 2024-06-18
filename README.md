@@ -59,7 +59,7 @@ time       blockactive boostactive cloudstate co_upd_state coversion coversionla
 1718714979 0           0           4          0            ec103     ec103           0           Conn. to Home Manager 192.168.2.1 0            192.168.2.1 192.168.2.225 255.255.255.0 18.06.24 0.0.0.0  AC ELWA 2 AC ELWA 2 null      0         49998 0      e0000901  e0000901        null         14:49:39 null      null      null      null      null      null      null       null  null  null null null null null null null null 240  0000901 255  null 255    null   240    ep107  0           4            0           0            0           0            4           0          4           0        0            ep107     ep107           0        0        1                53.4  0     411     1718714979 0         25     4        232        0        0                           0                           0                           0                           0                           0                           0                           0                         0                         0                         0                         0                         0                         0                         0                         0                         0
 ```
 
-Dies kann nun in Grafana ausgelesen und visualiziert werden.
+Dies kann nun in Grafana ausgelesen und visualisiert werden.
 
 ## Installation
 
