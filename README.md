@@ -85,7 +85,7 @@ Ich lese die Daten jede Minute mittels eines crontabs aus.
 
 ## Wichtig
 
-Vor dem Starten muss die IP-Adresse im Skript auf die von euerem AC-ELWA 2 geändert werden.
+Vor dem starten muss die IP-Adresse im Skript auf die von euerem AC-ELWA 2 geändert werden.
 
 
 
