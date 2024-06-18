@@ -83,7 +83,9 @@ Ich lese die Daten jede Minute mittels eines crontabs aus.
 */1 * * * * /usr/bin/python3 /root/ac-elwa2/ac-elwa2-fetchall.py
 ```
 
-## Vor dem Starten muss die IP-Adresse im Skript auf die vom eueren AC-ELWA 2 geändert werden.
+## Wichtig
+
+Vor dem Starten muss die IP-Adresse im Skript auf die vom eueren AC-ELWA 2 geändert werden.
 
 
 
