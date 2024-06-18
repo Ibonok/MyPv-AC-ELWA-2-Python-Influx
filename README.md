@@ -80,7 +80,7 @@ Ich lese die Daten jede Minute mittels eines crontabs aus.
 
 ```bash
 # crontab -e
-*/1 * * * * /usr/bin/python3 /root/ac-elwa2/ac-elwa2-fetchall.py
+*/1 * * * * /usr/bin/python3 /root/MyPv-AC-ELWA-2-Python-Influx/ac-elwa2-fetchall.py
 ```
 
 ## Wichtig
