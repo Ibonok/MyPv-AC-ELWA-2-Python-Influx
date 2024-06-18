@@ -67,6 +67,14 @@ Dies kann nun in Grafana ausgelesen und visualiziert werden.
 pip install influxdb requests
 ```
 
+## Anlegen der InfluxDB
+```
+influx -execute "create database ac_elwa2"
+influx -execute "SHOW DATABASES"
+influx -execute "CREATE USER elwa WITH PASSWORD 'smart' WITH ALL PRIVILEGES"
+influx -execute "grant all privileges on ac_elwa2 to elwa"
+```
+
 ## Crontab
 Ich lese die Daten jede Minute mittels eines crontabs aus.
 
