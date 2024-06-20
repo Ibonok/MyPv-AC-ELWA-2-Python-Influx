@@ -22,7 +22,6 @@ if response.status_code == 200:
     data = response.json()
 
     # Extract the required fields
-    unixtime = data['unixtime']
     power_elwa2 = data['power_elwa2']    # Benötigte Watt Gesamt
     power_solar = data['power_solar']    # Benötigte Watt Solar
     power_grid = data['power_grid']      # Benötigte Watt Grid / Netzbezug
@@ -47,7 +46,6 @@ if response.status_code == 200:
             "tags": {
                 "device": "AC ELWA 2"
             },
-            "time": unixtime,
             "fields": {                
                 "power_elwa2": power_elwa2,
                 "power_solar": power_solar,
@@ -59,7 +57,7 @@ if response.status_code == 200:
     ]
 
     # Write the data point to InfluxDB
-    client.write_points(json_body)
+    client.write_points(json_body, time_precision='m')
 
 
 else:
