@@ -39,7 +39,6 @@ if response.status_code == 200:
             "tags": {
                 "device": filtered_data['device']
             },
-            "time": filtered_data['unixtime'],
             "fields": filtered_data
         }
     ]
@@ -49,7 +48,7 @@ if response.status_code == 200:
     client = InfluxDBClient(host=host, port=port, username=username, password=password, database=database)
 
     # Write the data point to InfluxDB
-    client.write_points(json_body)
+    client.write_points(json_body, time_precision='m')
 
     print("Data inserted successfully.")
 else:
